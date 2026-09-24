@@ -18,7 +18,7 @@
             const map = L.map('map').setView([51.9741, 5.6688], 14); // note here as well the definition of the zoomlevel (14) and centroid coordinates of the view
 
             //Include a background layer based on a tiled layer service
-            const backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+            const backgroundMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
                     maxZoom: 19
                 }
