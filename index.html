@@ -18,7 +18,7 @@
   const map = L.map('map').setView([51.98526, 5.66365], 16);
 
   //Create baselayer - tegels
-  const backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  const backgroundMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     maxZoom: 19 } );
     // Add base layer to map.
@@ -87,8 +87,6 @@
       // Note; no '.addTo(map)' here to the layer, making them not visible yet at loading the page, but it is available!
       var OSMtopo = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {layers: 'TOPO-OSM-WMS'});
       layerControl.addBaseLayer(OSMtopo, "OSM Topo");
-      var RoadSegments = L.tileLayer.wms('https://geodata.nationaalgeoregister.nl/nl/rws/tn-ro/wms?', {layers: 'TN.RoadTransportNetwork.RoadLink'});
-      layerControl.addBaseLayer(RoadSegments, "RWS Road Segments");
       var HighResImage = L.tileLayer.wms('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0?', {layers: '2021_orthoHR'});
       layerControl.addBaseLayer(HighResImage, "7.5 cm Aerial (RGB) Image");
       var IRimage = L.tileLayer.wms('https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0?', {layers: 'Actueel_ortho25IR'});
